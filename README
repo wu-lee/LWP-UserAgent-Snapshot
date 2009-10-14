@@ -43,8 +43,16 @@ PUBLIC INSTANCE METHODS
     Overrides "LWP::UserAgent->simple_request" and implements the
     recording/playback mechanism, when enabled.
 
+CAVEATS
+    Because we associate each URL visited with its content as downloaded on
+    the first visit, this means we assume the website does not change - in
+    particular, that a given URL's content does not depend on when it's
+    visited, by what route, or other stateful information.
+
 SEE ALSO
     WWW::Mechanize and LWP::UserAgent for general information.
+
+    Similar tools include the unix "wget" command.
 
 AUTHOR
     Nick Woolley "<cpan.wu-lee@noodlefactory.co.uk>"
