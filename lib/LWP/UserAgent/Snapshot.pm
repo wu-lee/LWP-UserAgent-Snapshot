@@ -213,9 +213,18 @@ sub simple_request
     return $response;
 }
 
+=head1 CAVEATS
+
+Because we associate each URL visited with its content as downloaded
+on the first visit, this means we assume the website does not change -
+in particular, that a given URL's content does not depend on when it's
+visited, by what route, or other stateful information.
+
 =head1 SEE ALSO
 
 L<WWW::Mechanize> and L<LWP::UserAgent> for general information.
+
+Similar tools include the unix C<wget> command.
 
 =head1 AUTHOR
 
