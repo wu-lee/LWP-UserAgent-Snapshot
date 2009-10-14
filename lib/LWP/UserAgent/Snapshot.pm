@@ -2,7 +2,7 @@ package LWP::UserAgent::Snapshot;
 use strict;
 use warnings;
 use Carp;
-use Digest::MD5;
+use Digest::MD5 ();
 use HTTP::Response;
 use base 'LWP::UserAgent';
 
@@ -193,7 +193,7 @@ sub simple_request
     return $self->_mock_simple_request($request, @_)
         unless $DUMP_DIR;
 
-    my $digest = md5_hex($request->as_string);
+    my $digest = Digest::MD5::md5_hex($request->as_string);
 
     my $request_file = sprintf "$DUMP_DIR/$digest-request-%03d.txt", $INDEX;
     my $response_file = sprintf "$DUMP_DIR/$digest-response-%03d.html", $INDEX;
