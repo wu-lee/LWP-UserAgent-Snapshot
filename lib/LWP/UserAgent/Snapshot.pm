@@ -96,7 +96,7 @@ sub _mock_simple_request
 
     my $uri = $request->uri;
     my $method = $request->method;
-    print ">>> $INDEX $method $uri\n";
+#    print ">>> $INDEX $method $uri\n"; # DEBUG
 
     my $digest = Digest::MD5::md5_hex($request->as_string);    
     $request = $self->prepare_request($request);
@@ -114,7 +114,7 @@ sub _mock_simple_request
     $cookie_jar->extract_cookies($response) if $cookie_jar;
 
     my $response_status = $response->status_line;
-    print ">>> $INDEX status $response_status $digest\n";
+#    print ">>> $INDEX status $response_status $digest\n"; # DEBUG
 
     # handle extra arguments
     if ($content_handler) 
