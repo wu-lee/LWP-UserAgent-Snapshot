@@ -1,0 +1,5 @@
+#release_subclass Module::Release::ModuleBuild
+make ./Build
+makefile_PL Build.PL
+makefile Build
+cpan_user NPW
