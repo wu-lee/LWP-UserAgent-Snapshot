@@ -6,7 +6,7 @@ use Digest::MD5 ();
 use HTTP::Response;
 use base 'LWP::UserAgent';
 
-use version; our $VERSION = qv('0.1');
+use version; our $VERSION = qv('0.2');
 
 =head1 NAME
 

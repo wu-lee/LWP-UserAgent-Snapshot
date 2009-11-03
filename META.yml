@@ -1,6 +1,6 @@
 ---
 name: LWP-UserAgent-Snapshot
-version: v0.1
+version: v0.2
 author:
   - 'Nick Woolley <npw@cpan.org>'
 abstract: modifies the behaviour of LWP::UserAgent to record and playback data.
@@ -18,7 +18,7 @@ build_requires:
 provides:
   LWP::UserAgent::Snapshot:
     file: lib/LWP/UserAgent/Snapshot.pm
-    version: v0.1
+    version: v0.2
 generated_by: Module::Build version 0.3
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html
